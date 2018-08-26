@@ -40,3 +40,18 @@ print(not 1 > 2)
 
 # 空值
 None
+
+# 第一种以 / 作为运算符, 结果是浮点数
+print("以 / 作为运算符")
+print(10/3)
+
+# 第二种以 // 作为运算符, 结果是整数
+print("以 // 作为运算符")
+print(10//3)
+
+str = "Hello World!"
+print(str[1:3])
+print(str[1:-3])
+print(str[-2:-1])
+print(str + "Test")
+
