@@ -61,4 +61,45 @@ class GrandStudent(Student1):
 gs = GrandStudent()
 gs.score = 99
 
+'''
+python 内置的 @property 装饰器把一个方法编程属性调用 
+'''
+class Student2(object):
 
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError("score must be an interge")
+        if value < 0 or value > 100:
+            raise ValueError("score must between 0 ~ 100")
+        self._score = value
+
+
+s = Student2()
+s.score = 60
+print(s.score)
+# s.score = 900
+
+
+class Student3(object):
+
+    @property
+    def birth(self):
+        return self._birth
+
+    @birth.setter
+    def birth(self, value):
+        self._birth = value
+
+    @property
+    def age(self):
+        return 2018 - self._birth
+
+
+s = Student3()
+s.birth = 2000
+print(s.age)
