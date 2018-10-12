@@ -10,3 +10,5 @@ python 类装饰器
 ### 2018/09/29
  - python 枚举
  - python io
+### 2018/10/12
+ - python io 内存部分
